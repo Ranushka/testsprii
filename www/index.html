@@ -35,7 +35,9 @@
             }
         }
 
-        openBrowser();
+        
+        document.addEventListener("deviceready", openBrowser, false);
+        
     </script>
 
     <style>
