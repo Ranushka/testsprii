@@ -5,7 +5,14 @@
     <title>Zoggle</title>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script>
-        alert(cordova);
+        
+        function loadApp() {
+             alert(cordova);
+            var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+        }
+        
+        
+        loadApp();
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
             //navigator.splashscreen.hide();
@@ -16,10 +23,7 @@
             }
         }
 
-        function loadApp() {
-             alert(cordova);
-            var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-        }
+        
 
         function networkError() {
             navigator.notification.alert('Zoggle requires an internet connection')
