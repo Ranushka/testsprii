@@ -1,41 +1,40 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 
     <title>Zoggle</title>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script>
-        
-function openBrowser() {
-   var url = 'https://cordova.apache.org';
-   var target = '_blank';
-   var options = "location=yes"
-   var ref = cordova.InAppBrowser.open(url, target, options);
+        function openBrowser() {
+            var url = 'https://cordova.apache.org';
+            var target = '_blank';
+            var options = "location=yes"
+            var ref = cordova.InAppBrowser.open(url, target, options);
 
-   ref.addEventListener('loadstart', loadstartCallback);
-   ref.addEventListener('loadstop', loadstopCallback);
-   ref.addEventListener('loadloaderror', loaderrorCallback);
-   ref.addEventListener('exit', exitCallback);
+            ref.addEventListener('loadstart', loadstartCallback);
+            ref.addEventListener('loadstop', loadstopCallback);
+            ref.addEventListener('loadloaderror', loaderrorCallback);
+            ref.addEventListener('exit', exitCallback);
 
-   function loadstartCallback(event) {
-      console.log('Loading started: '  + event.url)
-   }
+            function loadstartCallback(event) {
+                console.log('Loading started: ' + event.url)
+            }
 
-   function loadstopCallback(event) {
-      console.log('Loading finished: ' + event.url)
-   }
+            function loadstopCallback(event) {
+                console.log('Loading finished: ' + event.url)
+            }
 
-   function loaderrorCallback(error) {
-      console.log('Loading error: ' + error.message)
-   }
+            function loaderrorCallback(error) {
+                console.log('Loading error: ' + error.message)
+            }
 
-   function exitCallback() {
-      console.log('Browser is closed...')
-   }
-}
-        
-openBrowser();
+            function exitCallback() {
+                console.log('Browser is closed...')
+            }
+        }
 
+        openBrowser();
     </script>
 
     <style>
@@ -45,13 +44,16 @@ openBrowser();
             color: #01ced3;
             text-align: center;
         }
+        
         div {
             font-size: 20px;
         }
     </style>
 </head>
+
 <body>
 
-<h1>hi</h1>
+    <h1>hi all</h1>
 </body>
+
 </html>
