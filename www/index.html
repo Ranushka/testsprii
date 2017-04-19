@@ -13,24 +13,7 @@
         
         
         loadApp();
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {
-            //navigator.splashscreen.hide();
-            if (navigator.network.connection.type == Connection.NONE) {
-                networkError()
-            } else {
-                loadApp()
-            }
-        }
 
-        
-
-        function networkError() {
-            navigator.notification.alert('Zoggle requires an internet connection')
-            var $net = document.createElement('div')
-            $net.innerHTML = 'Zoggle requires an internet connection'
-            document.body.appendChild($net)
-        }
     </script>
 
     <style>
