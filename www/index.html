@@ -6,11 +6,15 @@
     <title>Zoggle</title>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script>
+        window.onbeforeunload = function() {
+            return "You work will be lost.";
+        };
+
         function openBrowser() {
             var url = 'http://sprii.ae';
             var target = '_blank';
-            var options = "location=no,toolbar=no";         
-            
+            var options = "location=no,toolbar=no";
+
             var ref = cordova.InAppBrowser.open(url, target, options);
 
             ref.addEventListener('loadstart', loadstartCallback);
@@ -35,25 +39,22 @@
             }
         }
 
-        
         document.addEventListener("deviceready", openBrowser, false);
-        
     </script>
 
     <style>
         body {
             padding: 15px;
             background: #fff;
-            
             text-align: center;
         }
         
-        h1{
-        color: #8ba8cb;
+        h1 {
+            color: #8ba8cb;
         }
         
-        h4{
-        color: #edc7b7;
+        h4 {
+            color: #edc7b7;
         }
         
         div {
