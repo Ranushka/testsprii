@@ -18,12 +18,11 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+
+    </platform>
         <preference name="StatusBarOverlaysWebView" value="true" />
         <preference name="StatusBarBackgroundColor" value="#ffffff" />
-
         <preference name="StatusBarStyle" value="white" />
-    </platform>
-    
     <engine name="android" spec="~5.2.2" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0" />
 </widget>
