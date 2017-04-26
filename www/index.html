@@ -37,6 +37,11 @@
             function exitCallback() {
                 console.log('Browser is closed...')
             }
+
+            if (window.cordova && StatusBar) {
+                StatusBar.backgroundColorByHexString('#BE1912');
+            }
+
         }
 
         document.addEventListener("deviceready", openBrowser, false);
