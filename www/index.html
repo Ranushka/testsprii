@@ -38,6 +38,9 @@
                 console.log('Browser is closed...')
             }
 
+            if (window.cordova && StatusBar) {
+                StatusBar.backgroundColorByHexString('#ffffff');
+            }
 
         }
 
