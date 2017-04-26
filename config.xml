@@ -20,8 +20,10 @@
         <allow-intent href="market:*" />
         <!--<preference name="StatusBarOverlaysWebView" value="true" />
         <preference name="StatusBarBackgroundColor" value="#ffffff" />-->
+
+        <preference name="StatusBarStyle" value="white" />
     </platform>
-    <preference name="StatusBarStyle" value="white" />
+    
     <engine name="android" spec="~5.2.2" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0" />
 </widget>
